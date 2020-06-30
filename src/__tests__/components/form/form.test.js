@@ -22,22 +22,34 @@ describe('<Form>', () => {
     expect(form.state('method')).toEqual('get');
   });
 
+  it('properly store the users input into the reuest after submit', () => {
+    const form = mount(<Form />);
+    const buttonForm = form.find('form');
+    const urlInput = form.find('.input');
+    const methodInput = form.find('.methodGet');
+    urlInput.simulate('change',{ target: { value: 'url' } });
+    methodInput.simulate('click');
+    buttonForm.simulate('submit'); 
+    expect(form.state('request').method).toBe('get');
+    expect(form.state('request').url).toBe('url');
+  });
+
   it('properly clear the form/state after the form is submitted', () => {
     const form = mount(<Form />);
-    const button = form.find('button');
-    button.simulate('submit');
+    const buttonForm = form.find('form');
+    buttonForm.simulate('submit'); 
     expect(form.state('method')).toBeFalsy();
     expect(form.state('url')).toBeFalsy();
   });
 
   it('properly display the output on form submit', () => {
     const form = mount(<Form />);
-    const button = form.find('button');
+    const buttonForm = form.find('form');
     const urlInput = form.find('.input');
     const methodInput = form.find('.methodGet');
     urlInput.simulate('change',{ target: { value: 'url' } });
     methodInput.simulate('click');
-    button.simulate('submit');
+    buttonForm.simulate('submit');
     expect(form.find('.methodOutput').text()).toContain('get');
     expect(form.find('.urlOutput').text()).toContain('url');
   });
