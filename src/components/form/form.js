@@ -2,38 +2,38 @@ import React from 'react';
 import './form.scss';
 
 class Form extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = { method:'', url:'', request:{} };
-    }
+  constructor(props) {
+    super(props);
+    this.state = { method:'', url:'', request:{} };
+  }
 
-    render() {
-        return (
-          <main className="main">
-            <form onSubmit={this.handleSubmit}>
+  render() {
+    return (
+      <main className="main">
+        <form onSubmit={this.handleSubmit}>
 
-                  <div className="div">
-                    <input className="input" type="text" placeholder="Enter URL" onChange={this.handleUrl} />
-                    <button type="submit">GO!</button>
-                  </div>
+          <div className="div">
+            <input className="input" type="text" placeholder="Enter URL" onChange={this.handleUrl} />
+            <button type="submit">GO!</button>
+          </div>
                  
-                  <div className="div">
-                    <span className="method"><input className="methodGet"  type="radio" name="method" value="get"onClick={this.handleMethod}/>GET</span>
-                    <span className="method" ><input type="radio" name="method" value="post"onClick={this.handleMethod}/>POST</span>
-                    <span className="method"><input type="radio" name="method" value="put"onClick={this.handleMethod}/>PUT</span>
-                    <span className="method"><input type="radio" name="method" value="delete"onClick={this.handleMethod}/>DELETE</span>
-                  </div>
+          <div className="div">
+            <span className="method"><input className="methodGet"  type="radio" name="method" value="get"onClick={this.handleMethod}/>GET</span>
+            <span className="method" ><input type="radio" name="method" value="post"onClick={this.handleMethod}/>POST</span>
+            <span className="method"><input type="radio" name="method" value="put"onClick={this.handleMethod}/>PUT</span>
+            <span className="method"><input type="radio" name="method" value="delete"onClick={this.handleMethod}/>DELETE</span>
+          </div>
 
-            </form>
+        </form>
 
-            <div className="results">
-                <h3 className ="methodOutput">{this.state.request.method}</h3>  
-                <h3 className="urlOutput">{this.state.request.url} </h3>
-            </div>
+        <div className="results">
+          <h3 className ="methodOutput">{this.state.request.method}</h3>  
+          <h3 className="urlOutput">{this.state.request.url} </h3>
+        </div>
           
-          </main>
-        );
-      }
+      </main>
+    );
+  }
 
     handleUrl = (e) => {
       const url = e.target.value;
@@ -59,9 +59,9 @@ class Form extends React.Component {
       }else{
         alert('missing information');
       }
-      };
+    };
   
-  }
+}
 
 
 export default Form;
