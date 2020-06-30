@@ -55,7 +55,7 @@ class Form extends React.Component {
         let url = '';
         let method = '';
         this.setState({request, url, method});
-        e.target.reset();
+        // e.target.reset();
       }else{
         alert('missing information');
       }
