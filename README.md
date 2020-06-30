@@ -9,7 +9,7 @@
 - [submission PR base](https://github.com/marah-401-advanced-javascript/resty-react/pull/1)
 -  [submission PR testing](https://github.com/marah-401-advanced-javascript/resty-react/pull/2)
 
-- [deployed Application GH](not yet)
+- [deployed Application GH](https://marah-401-advanced-javascript.github.io/resty-react/)
 - [deployed Application netlify](not yet)
 
 ### Modules
