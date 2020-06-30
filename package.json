@@ -7,7 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/mrsmarah/resty-react.git"
   },
-  "homepage":"/",
+  "homepage":"https://mrsmarah.github.io/resty-react/",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
