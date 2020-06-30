@@ -25,7 +25,7 @@
 
 #### Tests
 
-- Unit Tests: `npm test` not done yet
+- Unit Tests: `npm test`
 - Lint Tests: `npm run lint`
 
 
